@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Product Search</title>-->
+     <!--<title>Category Filter</title>-->
+     <!--<title>Price Sorting</title>-->
+     <!-- <title>Product Details Popup</title> -->
+      <title>Shopping Cart</title>
+     <!--<style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            padding:30px;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+        #productContainer{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            width:220px;
+            background:white;
+            border-radius:10px;
+            padding:15px;
+            text-align:center;
+            box-shadow:0 2px 8px rgba(0,0,0,0.2);
+            cursor:pointer;
+            transition:0.3s;
+        }
+        .card:hover{
+            transform:scale(1.05);
+        }
+
+        .card img{
+            width:150px;
+            height:150px;
+            object-fit:cover;
+        }
+
+        .card h3{
+            margin:10px 0;
+        }
+
+        .card p{
+            color:green;
+            font-weight:bold;
+        }
+        .modal{
+            display:none;
+            position:fixed;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.6);
+        }
+
+        .modal-content{
+            background:white;
+            width:400px;
+            margin:60px auto;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+            position:relative;
+        }
+        .modal-content img{
+            width:220px;
+            height:220px;
+            object-fit:cover;
+            margin-bottom:15px;
+        }
+
+        .modal-content h2{
+            margin-bottom:10px;
+        }
+
+        .modal-content p,
+        .modal-content h3{
+            margin:8px 0;
+        }
+        #close{
+            position:absolute;
+            right:15px;
+            top:10px;
+            font-size:28px;
+            cursor:pointer;
+            color:red;
+        }
+
+        #close:hover{
+            color:black;
+        }
+    </style>-->
+    <!--Shopping Cart Styles-->
+    <style>
+
+        body{
+            font-family: Arial;
+            background:#f4f4f4;
+            margin:20px;
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        #cartCount{
+            position:fixed;
+            top:20px;
+            right:20px;
+            background:black;
+            color:white;
+            padding:10px;
+            border-radius:5px;
+        }
+
+        #products{
+            display:flex;
+            flex-wrap:wrap;
+            gap:20px;
+            justify-content:center;
+        }
+
+        .card{
+            width:220px;
+            background:white;
+            padding:15px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 0 5px gray;
+        }
+
+        .card img{
+            width:150px;
+            height:150px;
+            object-fit:contain;
+        }
+
+        button{
+            padding:10px;
+            background:green;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+        table{
+            width:80%;
+            margin:30px auto;
+            border-collapse:collapse;
+        }
+
+        table,th,td{
+            border:1px solid gray;
+        }
+
+        th,td{
+            padding:10px;
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <h2>Product Search</h2>-->
+
+    <!--<input
+        type="text"
+        id="search"
+        placeholder="Search Product"
+        onkeyup="searchProduct()"
+    >-->
+
+    <!--<div id="productList"></div>-->
+
+    <!--<h2>Category Filter</h2>
+
+    <button onclick="filterProducts('All')">All</button>
+    <button onclick="filterProducts(`Men's Clothing`)">Men's Clothing</button>
+    <button onclick="filterProducts(`Women's Clothing`)">Women's Clothing</button>
+    <button onclick="filterProducts('Jewelery')">Jewelery</button>
+    <button onclick="filterProducts('Electronics')">Electronics</button>
+
+    <hr>
+
+    <div id="productList"></div>-->
+
+    <!--<h2>Product Price Sorting</h2>
+
+    <button onclick="sortLowToHigh()">
+        Low => High
+    </button>
+
+    <button onclick="sortHighToLow()">
+        High => Low
+    </button>
+
+    <hr>
+
+    <div id="productList"></div>-->
+
+    <!--<h2>Products</h2>
+
+    <div id="productContainer"></div>-->
+
+    <!-- Modal -->
+
+    <!--<div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <span id="close">&times;</span>
+
+            <img id="modalImage">
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalDescription"></p>
+
+            <h3 id="modalPrice"></h3>
+
+            <p id="modalRating"></p>
+
+            <p id="modalCategory"></p>
+
+        </div>
+
+    </div>-->
+
+    <h1>Shopping Cart</h1>
+
+<div id="cartCount">
+Cart : 0
+</div>
+
+<div id="products"></div>
+
+<h2 align="center">Cart Items</h2>
+
+<table>
+
+<thead>
+<tr>
+
+<th>Product</th>
+<th>Quantity</th>
+<th>Total Price</th>
+
+</tr>
+
+</thead>
+
+<tbody id="cartTable">
+
+</tbody>
+
+</table>
+
+<h2 align="center" id="grandTotal"></h2>
+
+    <script src="./final-task.js"></script>
+</body>
+</html>
